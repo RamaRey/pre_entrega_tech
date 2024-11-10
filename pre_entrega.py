@@ -1,9 +1,10 @@
+opcion = ""
 lista_producto = [{"nombre":"coca", "stock":5},
                   {"nombre":"pepsi","stock":7}
                   ]
 
-while True:
-        print ("\n--- SISTEMA DE STOCK BEBIDAS ---")
+while opcion != "4":
+        print ("\n\n--- SISTEMA DE STOCK BEBIDAS ---")
         print ("\n1) Agregar Producto")
         print ("2) Control de Stock")
         print ("3) Generar Reporte Productos")
@@ -12,18 +13,28 @@ while True:
         opcion = input("\nIngrese la opcion deseada: ")
 
         if opcion == "1":
-            print("\n--- AGREGAR PRODUCTO ---")
-            print("")
-            producto = input("ingrese un producto: ")
-            stock = input("Ingrese el stock: ")
-            if stock == type (int):
-                disc_producto = { "nombre":producto,"stock":stock }
-                lista_producto.append(disc_producto)
-                print (f"\nEl producto", producto, "fue agregado con exito")
-                print(f"Su stock es",stock,"unidades")
-                print("")
-            else:
-                print("\nEl stock debe ser ingresado en valores numericos")
+                opcion_producto = ""
+                while opcion_producto != "2":
+                    print("\n--- AGREGAR PRODUCTO ---")
+                    print ("\n1) Desea ingresar un producto?")
+                    print ("2) Menu principal")
+                    print("")
+                    opcion_producto = input("Ingrese la opcion deseada: ")
+                    if opcion_producto == "1":
+                        producto = input("\ningrese un producto: ")
+                        stock = int(input("Ingrese el stock: "))
+                        while stock <= 0:
+                            print("\nSolo se permite stock positivo")
+                            stock = int(input("\nIngrese el stock correcto: "))
+                        disc_producto = { "nombre":producto,"stock":stock }
+                        lista_producto.append(disc_producto)
+                        print (f"\nEl producto", producto, "fue AGREGADO con exito")
+                        print(f"Su stock es",stock,"unidades")
+                        print("")
+                    elif opcion_producto == "2":
+                        break
+                    else:
+                        print("\n--- OPCION INCORRECTA!!!")
 
         elif opcion == "2":
             producto = input("\nIngrese el nombre del producto que quiere buscar: ")

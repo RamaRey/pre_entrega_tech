@@ -4,7 +4,7 @@ lista_producto = [{"nombre":"coca", "stock":5},
                   ]
 
 while opcion != "4":
-        print ("\n\n--- SISTEMA DE STOCK BEBIDAS ---")
+        print ("\n--- SISTEMA DE STOCK BEBIDAS ---")
         print ("\n1) Agregar Producto")
         print ("2) Control de Stock")
         print ("3) Generar Reporte Productos")

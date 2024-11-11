@@ -13,6 +13,7 @@ while opcion != "4":
         opcion = input("\nIngrese la opcion deseada: ")
 
         if opcion == "1":
+                #Un bucle con un submenu, para seguir agregando productos o volver al menu principal
                 opcion_producto = ""
                 while opcion_producto != "2":
                     print("\n--- AGREGAR PRODUCTO ---")
@@ -23,6 +24,7 @@ while opcion != "4":
                     if opcion_producto == "1":
                         producto = input("\ningrese un producto: ")
                         stock = int(input("Ingrese el stock: "))
+                        #Bucle para controlar que el stock siempre sean numeros positivos.
                         while stock <= 0:
                             print("\nSolo se permite stock positivo")
                             stock = int(input("\nIngrese el stock correcto: "))
@@ -39,6 +41,7 @@ while opcion != "4":
         elif opcion == "2":
             producto = input("\nIngrese el nombre del producto que quiere buscar: ")
             contador = 0
+            #Bucle para encontrar el producto
             while contador < len(lista_producto):
                 if lista_producto[contador]["nombre"] == producto:
                     print("\n<-- PRODUCTO ENCONTRADO -->")
@@ -52,12 +55,14 @@ while opcion != "4":
                     print("")
 
         elif opcion == "3":
+            #Un For para imprimir la lista completa.
             print("\n--- REPORTE INVENTARIO ---")
             for producto in lista_producto:
                 print ("\nProducto:", producto['nombre'])
                 print ("Stock:", producto['stock'])
 
         elif opcion == "4":
+            #Sale del sistema y finaliza la APP.
             print("\nGRACIAS POR USAR EL SISTEMA")
             print("")
             break

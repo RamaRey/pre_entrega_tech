@@ -72,6 +72,6 @@ while opcion != "4":
             break
        
         else:
-            print("\n--- OPCION INCORRECTA!!!")
-            print("\ningrese opcion correcta")
+            print("\n---> OPCION INCORRECTA!!!")
+            print("\nIngrese opcion correcta")
             print("")

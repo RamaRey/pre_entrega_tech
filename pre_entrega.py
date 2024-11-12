@@ -4,7 +4,9 @@ lista_producto = [{"nombre":"coca", "stock":5},
                   ]
 
 while opcion != "4":
-        print ("\n--- SISTEMA DE STOCK BEBIDAS ---")
+        print ("\n------------------------")
+        print ("SISTEMA STOCK DE BEBIDAS")
+        print ("------------------------")
         print ("\n1) Agregar Producto")
         print ("2) Control de Stock")
         print ("3) Generar Reporte Productos")
@@ -30,7 +32,7 @@ while opcion != "4":
                             stock = int(input("\nIngrese el stock correcto: "))
                         disc_producto = { "nombre":producto,"stock":stock }
                         lista_producto.append(disc_producto)
-                        print (f"\nEl producto", producto, "fue AGREGADO con exito")
+                        print (f"\n--> El producto", producto, "fue AGREGADO con exito")
                         print(f"Su stock es",stock,"unidades")
                         print("")
                     elif opcion_producto == "2":
@@ -63,7 +65,9 @@ while opcion != "4":
 
         elif opcion == "4":
             #Sale del sistema y finaliza la APP.
-            print("\nGRACIAS POR USAR EL SISTEMA")
+            print ("\n-----------------------------")
+            print("GRACIAS POR USAR EL SISTEMA")
+            print ("-----------------------------")
             print("")
             break
        
